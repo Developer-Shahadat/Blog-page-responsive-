@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #e8e8e8;
+}
+
+.blog-post{
+    max-width: 1240px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 28px;
+}
+
+.card-img img{
+    width: 100%;
+}
+/*   Responsive Device    */
+@media (min-width : 600px) {
+    .blog-post{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width: 920px) {
+    .blog-post{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (min-width : 1200px){
+    .blog-post{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+/* Section/Main */
+section{
+    margin: 200px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title-section h1{
+    font-size: 32px;
+}
+
+.title-section span{
+    color: #ed445b;
+}
+.title-section ::after{
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: #ed445b;
+    margin-top: 20px;
+}
+/*      Card Div        */
+.card{
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #fff;
+    transition: 0.3s ease-in-out;
+}
+.card:hover{
+    transform: translate(2%,-2%);
+ }
+
+.card-content{
+    padding: 12px 14px;
+}    
+.card-content h2{
+    font-size: 24px;
+}
+.card-content h2 a {
+   text-decoration: none;
+   color: #333;
+   transition: 0.2s ease-in-out;
+}
+
+.card-content h2 a:hover{
+    color: #ed445b;
+}
+
+.card-content p {
+    margin-top: 10px;
+}
+
+.card-content button{
+    padding: 4px 8px;
+    margin: 12px 0;
+    border: 1px solid #ed445b;
+    background-color: #ed445b;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.card-content button:hover{
+    background: transparent;
+    color: #333;
+}
+
+/*   Footer  */
+.footer{
+    background-color: slategrey;
+    text-align: center;
+}
